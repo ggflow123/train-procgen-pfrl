@@ -77,7 +77,7 @@ def rollout_one_step(agent, env, obs, steps, env_max_steps=1000):
     steps += 1
     reset = steps == env_max_steps
     steps[done] = 0
-
+    #print("new_obs: ", new_obs.min(), new_obs.max(), new_obs.mean())
     # Save experience.
     agent.batch_observe(
         batch_obs=new_obs,
